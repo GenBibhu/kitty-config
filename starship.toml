@@ -1,0 +1,57 @@
+# Use a blank line between prompts
+add_newline = true
+
+# Prompt format
+format = """
+$os$username$hostname$directory$git_branch$git_status$cmd_duration
+$character
+"""
+
+[os]
+disabled = false
+style = "bold cyan"
+format = "[$symbol]($style)"
+
+[os.symbols]
+Arch = " "
+
+# Username
+[username]
+show_always = true
+style_user = "bold cyan"
+style_root = "bold red"
+format = "[$user]($style)"
+
+# Hostname
+[hostname]
+ssh_only = false
+format = "[@$hostname](bold purple) "
+disabled = false
+
+# Directory
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold blue"
+format = "in [$path]($style)[$read_only]($read_only_style) "
+
+# Git branch
+[git_branch]
+symbol = " "
+style = "bold magenta"
+format = "on [$symbol$branch]($style) "
+
+# Git status
+[git_status]
+style = "bold yellow"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+[cmd_duration]
+min_time = 1000
+style = "bold bright-black"
+format = "took [$duration]($style) "
+
+# Prompt character
+[character]
+success_symbol = "[❯](bold cyan)"
+error_symbol = "[✗](bold red)"

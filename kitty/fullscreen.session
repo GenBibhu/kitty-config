@@ -1,0 +1,3 @@
+os_window_state maximized
+layout splits
+launch --cwd=current
