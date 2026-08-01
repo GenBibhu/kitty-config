@@ -33,6 +33,7 @@ sudo pacman -S kitty starship ttf-jetbrains-mono-nerd
 │   ├── fullscreen.session
 │   └── KEYMAP.md
 ├── starship.toml
+├── LICENSE
 └── install.sh
 ```
 
@@ -78,3 +79,7 @@ git add .
 git commit -m "Update terminal config"
 git push
 ```
+
+## License
+
+Released under the MIT License. See `LICENSE` for details.
